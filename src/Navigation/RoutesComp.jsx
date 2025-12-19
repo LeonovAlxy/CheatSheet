@@ -8,7 +8,6 @@ const RoutesComp = () => {
   return (
     <Routes>
       {topics.map((topic) => {
-        console.log(topic);
         return (
           <Route
             key={topic.id}
