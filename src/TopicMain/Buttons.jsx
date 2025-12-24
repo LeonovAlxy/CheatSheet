@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TopicsContext } from "../Contexts/TopicsContext";
 
-const Buttons = ({ topic }) => {
+const Buttons = ({ topic, onStart }) => {
   const { topics } = useContext(TopicsContext);
 
   const navigate = useNavigate();
@@ -21,9 +21,13 @@ const Buttons = ({ topic }) => {
     setCurrIndex(newIndex);
     navigate(`/${topics[newIndex].id}`);
   };
+  const handleNavMain = () => {
+    navigate("/home");
+    onStart();
+  };
 
   return (
-    <>
+    <div>
       {currIndex > 0 && (
         <button onClick={() => handleNavigate(-1)}>
           <p>&larr; {topics[currIndex - 1].title}</p>
@@ -35,7 +39,10 @@ const Buttons = ({ topic }) => {
           <p>{topics[currIndex + 1].title} &rarr;</p>
         </button>
       )}
-    </>
+      <button onClick={handleNavMain}>
+        <p>Перейти на главную</p>
+      </button>
+    </div>
   );
 };
 export default Buttons;

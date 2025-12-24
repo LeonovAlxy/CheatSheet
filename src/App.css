@@ -1,42 +1,77 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  text-align: left;
+  display: flex;
+  height: 100vh;  
+  background-color:  #f2f2f2;      
+
+}
+nav {
+  width: 250px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+  height: 100vh,
+}
+nav ul li {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 8px;  
+  border-radius: 4px;
+}
+nav ul li a{
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 8px;  
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #4e4caf;                           
+  transition: all 0.2s ease;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+nav ul li a{
+color: white; 
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+ 
+nav ul li a:hover{
+  background-color: #5345a0;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a:active{
+  background-color: #513e8e; 
+  transform: translateY(5px); 
+  box-shadow: inset 0 3px 5px rgba(169, 173, 236, 0.859); 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.app-container {
+  flex: 1;                      
+  padding: 20px;                
+  overflow-y: auto; 
+}
+.app-container button {
+ display: inline-block;          
+  width: 200px;                   
+  height: 50px;                   
+  margin: 30px 10px;         
+  padding: 0px ;             
+  font-size: 16px;                
+  text-align: center;
+  cursor: pointer;                
+  border: none;                   
+  border-radius: 8px;             
+  background-color: #4e4caf;      
+  color: white;                  
+  transition: all 0.2s ease;      
+}
+button:hover {
+  background-color: #5345a0; 
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
+button:active {
+  background-color: #513e8e; 
+  transform: translateY(5px); 
+  box-shadow: inset 0 3px 5px rgba(169, 173, 236, 0.859); 
 }

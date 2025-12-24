@@ -1,12 +1,12 @@
 import Buttons from "./Buttons";
 
-const TopicBody = ({ topic }) => {
+const TopicBody = ({ topic, onStart }) => {
   return (
-    <div>
+    <div className="app-container">
       <h2>{topic.title}</h2>
-      <p>{topic.description}</p>
+      <>{topic.description}</>
       <a href={topic.documentation}>Официальная документация</a>
-      <Buttons topic={topic} />
+      <Buttons onStart={onStart} topic={topic} />
     </div>
   );
 };
