@@ -1,0 +1,15 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: #e6e6fa;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  overflow: auto;
+}

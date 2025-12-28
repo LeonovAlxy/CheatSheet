@@ -10,7 +10,13 @@ const NavLinks = ({ onStart }) => {
         {topics.map((topic) => {
           return (
             <li key={topic.id}>
-              <NavLink onClick={onStart} to={`/${topic.id}`}>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
+                onClick={onStart}
+                to={`/${topic.id}`}
+              >
                 {topic.title}
               </NavLink>
             </li>

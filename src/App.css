@@ -1,77 +1,104 @@
 #root {
-  margin: 0 auto;
+  margin-top: 60px;
   text-align: left;
   display: flex;
-  height: 100vh;  
-  background-color:  #f2f2f2;      
-
+  height: 100vh;
+  background-color: #f2f2f2;
 }
+
+/* Меню (сайдбар) */
 nav {
   width: 250px;
-  background-color: #f2f2f2;
+  background-color: #e6e6fa;
   padding: 20px;
   box-sizing: border-box;
   overflow: auto;
-  height: 100vh,
+  border-radius: 8px;
+  margin: 5px;
+  min-height: 50vh;
 }
+
+/* Список элементов меню */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 nav ul li {
   padding: 10px 15px;
   margin-bottom: 5px;
-  border-radius: 8px;  
-  border-radius: 4px;
+  border-radius: 8px;
 }
-nav ul li a{
+
+/* Общие стили для ссылок внутри элементов */
+nav ul li a,
+.nav-link {
+  display: block;
   padding: 10px 15px;
-  margin-bottom: 5px;
-  border-radius: 8px;  
+  border-radius: 4px; /* общий радиус, исправленный (больше не дублируется) */
   cursor: pointer;
-  border-radius: 4px;
-  background-color: #4e4caf;                           
+  text-align: center;
+  color: white;
+  background-color: #5f549f; /* основной фон */
   transition: all 0.2s ease;
-  text-align: center;
+  text-decoration: none; /* убираем подчеркивание у ссылок */
 }
 
-nav ul li a{
-color: white; 
-}
- 
-nav ul li a:hover{
-  background-color: #5345a0;
-}
-nav ul li a:active{
-  background-color: #513e8e; 
-  transform: translateY(5px); 
-  box-shadow: inset 0 3px 5px rgba(169, 173, 236, 0.859); 
+/* Ховер-эффекты */
+nav ul li a:hover,
+.nav-link:hover {
+  background-color: #4b3ba5;
 }
 
+/* Активный стиль для выделенной ссылки */
+.nav-link.active {
+  background-color: #391d92;
+  font-weight: bold;
+}
 
+/* Псевдо-активное состояние (нажатие, как при :active) */
+nav ul li a:active {
+  background-color: #391d92;
+  transform: translateY(5px);
+  box-shadow: inset 0 3px 5px rgba(169, 173, 236, 0.86);
+}
+
+/* Контейнер основной части приложения */
 .app-container {
-  flex: 1;                      
-  padding: 20px;                
-  overflow-y: auto; 
+  flex: 1;
+  padding: 20px;
+  background-color: #e6e6fa;
+  border-radius: 8px;
+  margin: 5px;
+  overflow-y: auto;
 }
-.app-container button {
- display: inline-block;          
-  width: 200px;                   
-  height: 50px;                   
-  margin: 30px 10px;         
-  padding: 0px ;             
-  font-size: 16px;                
+
+/* Стиль для кнопок */
+button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  margin: 30px 10px;
+  padding: 0;
+  font-size: 16px;
   text-align: center;
-  cursor: pointer;                
-  border: none;                   
-  border-radius: 8px;             
-  background-color: #4e4caf;      
-  color: white;                  
-  transition: all 0.2s ease;      
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #5f549f;
+  color: white;
+  transition: all 0.2s ease;
 }
+
+/* Ховер для кнопок */
 button:hover {
-  background-color: #5345a0; 
+  background-color: #4b3ba5;
 }
 
-
+/* Активация кнопки */
 button:active {
-  background-color: #513e8e; 
-  transform: translateY(5px); 
-  box-shadow: inset 0 3px 5px rgba(169, 173, 236, 0.859); 
+  background-color: #391d92;
+  transform: translateY(5px);
+  box-shadow: inset 0 3px 5px rgba(169, 173, 236, 0.86);
 }

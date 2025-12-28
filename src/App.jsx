@@ -2,6 +2,7 @@ import { useState } from "react";
 import NavLinks from "./Navigation/NavLinks";
 import RoutesComp from "./Navigation/RoutesComp";
 import HomePage from "./TopicMain/HomePage";
+import Header from "./Navigation/Header/Header";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <NavLinks onStart={() => setShowHome(false)} />
       {showHome ? (
         <HomePage onStart={handleShowHome} />
