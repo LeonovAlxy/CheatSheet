@@ -12,7 +12,7 @@ const RoutesComp = ({ onStart }) => {
         return (
           <Route
             key={topic.id}
-            path={`/${topic.id}`}
+            path={`/CheatSheet/${topic.id}`}
             element={<TopicBody onStart={onStart} topic={topic} />}
           />
         );

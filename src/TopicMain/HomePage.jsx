@@ -6,7 +6,7 @@ const HomePage = ({ onStart }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/${topics[0].id}`);
+    navigate(`/CheatSheet/${topics[0].id}`);
     onStart();
   };
 
