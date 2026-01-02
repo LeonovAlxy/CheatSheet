@@ -2,7 +2,7 @@ import { useState } from "react";
 import NavLinks from "./Navigation/NavLinks";
 import RoutesComp from "./Navigation/RoutesComp";
 import HomePage from "./TopicMain/HomePage";
-import Header from "./Navigation/Header/Header";
+import Header from "./Header/Header";
 import "./App.css";
 
 function App() {
