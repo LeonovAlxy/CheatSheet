@@ -15,7 +15,7 @@ const NavLinks = ({ onStart }) => {
                   `nav-link ${isActive ? "active" : ""}`
                 }
                 onClick={onStart}
-                to={`/${topic.id}`}
+                to={`/CheatSheet/${topic.id}`}
               >
                 {topic.title}
               </NavLink>

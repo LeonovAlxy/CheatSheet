@@ -17,7 +17,7 @@ const RoutesComp = ({ onStart }) => {
           />
         );
       })}
-      <Route path="/home" index element={<HomePage />} />
+      <Route path="/CheatSheet/home" index element={<HomePage />} />
     </Routes>
   );
 };

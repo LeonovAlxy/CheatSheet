@@ -19,10 +19,10 @@ const Buttons = ({ topic, onStart }) => {
     const newIndex = currIndex + direction;
 
     setCurrIndex(newIndex);
-    navigate(`/${topics[newIndex].id}`);
+    navigate(`/CheatSheet/${topics[newIndex].id}`);
   };
   const handleNavMain = () => {
-    navigate("/home");
+    navigate("/CheatSheet/home");
     onStart();
   };
 
